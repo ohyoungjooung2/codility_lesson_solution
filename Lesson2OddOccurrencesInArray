@@ -1,0 +1,30 @@
+#https://codility.com/programmers/lessons/2-arrays/odd_occurrences_in_array/
+
+def solution(a)
+  # write your code in Ruby 2.2
+   result=a.inject :^
+   return result
+
+end
+
+
+#Other solutions..
+#def sol(a)
+# s=0
+# last=a.size-1
+# result=a[s]
+# for i in (s+1..last)
+#   result^=a[i]
+# end
+#   puts result
+#end
+
+#def sol2(a)
+#  result=a.shift
+#  a.each { |e| result^=e }
+#  puts result
+#end
+#
+#sol2(a)
+
+
