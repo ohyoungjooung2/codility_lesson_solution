@@ -1,4 +1,20 @@
+
+##Q)Rotate an array to the right by a given number of steps. 
 def solution(a,k)
- a.rotate(-k)
+	r=a.rotate(-k)
+	p r
 end
+
+#Test
+#10 array
+a=[]
+(1..10).each do |i|
+	a << i
+end
+#rotate 3 times
+solution(a,3)
+
+#Test in console.
  
+oyj@controller:~/ruby_prac$ ruby rotate.rb 
+[8, 9, 10, 1, 2, 3, 4, 5, 6, 7]
