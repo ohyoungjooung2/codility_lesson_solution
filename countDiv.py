@@ -11,7 +11,7 @@ def solution(A, B, K):
     elif (A%K==0) and (B%K==0):
         return int((B-A)/K) + 1
         #2,10000,9998
-    elif (B-A+1)==K:
+    elif (B-A)==K:
         return 1
         #when K is even
     elif K % 2 == 0:
