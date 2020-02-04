@@ -1,4 +1,15 @@
 #https://codility.com/programmers/lessons/6-sorting/max_product_of_three/
+#python3
+def solution(A):
+    a=[]
+    rs=sorted(A)
+    rs1=rs[-3]*rs[-2]*rs[-1]
+    rs2=rs[0]*rs[1]*rs[-1]
+    a.append(rs1)
+    a.append(rs2)
+    return max(a)
+
+#Ruby2.2(345..)
 def solution(a)
   # write your code in Ruby 2.2
   n=[]
