@@ -18,3 +18,14 @@ def solution(a)
    end
 end
 
+#Python3 slow solution(50%-100% correctness)
+def solution(A):
+    # write your code in Python 3.6
+    n=len(A)
+    c=0
+    for i in range(n):
+        for j in range((i+1),n):
+            if (A[i],A[j])==(0,1):
+                c+=1
+    return c
+
