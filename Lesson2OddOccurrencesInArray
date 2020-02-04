@@ -27,4 +27,12 @@ end
 #
 #sol2(a)
 
+#Python3 Solution
 
+def solution(A):
+    s=0
+    for i in range(len(A)):
+        s ^= A[i]
+    return s
+
+print(solution(r))
