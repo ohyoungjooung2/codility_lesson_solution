@@ -1,3 +1,5 @@
+
+#https://app.codility.com/programmers/lessons/5-prefix_sums/count_div/
 def solution(a, b, k)
   # write your code in Ruby 2.2
   if (a==0) && (b==0)
