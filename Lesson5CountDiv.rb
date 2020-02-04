@@ -1,12 +1,13 @@
 def solution(a, b, k)
-  #https://codility.com/programmers/lessons/5-prefix_sums/count_div/
   # write your code in Ruby 2.2
-    if (a==0) && (b==0)
+  if (a==0) && (b==0)
     return 1
   elsif k==1
     return (a..b).size
+    #2,200000000000,2
   elsif (a%k==0) && (b%k==0)
     return ((a..b).size / k)+1
+    #2,10000,9998
   elsif (b-a)==k
     return 1
   elsif k.odd?
