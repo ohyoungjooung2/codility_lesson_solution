@@ -12,6 +12,13 @@ end
 #a=[1]
 #solution(a)
 
+#Python3 math algo like above ruby solution
+def solution(a):
+     one_more_len = len(a)+1
+     asum = sum(a)
+     r = (((one_more_len+1)*(one_more_len))/2) - asum
+     return int(r)
+
 #Python3(Good? model using python set)
 def solution(A):
       A.sort()
