@@ -1,34 +1,5 @@
-#A zero-indexed array A consisting of N different integers is given. The array contains integers in the range [1..(N + 1)], which means that exactly one element is missing.
-#
-#Your goal is to find that missing element.
-#
-#Write a function:
-#
-#    def solution(a)
-#
-#that, given a zero-indexed array A, returns the value of the missing element.
-#
-#For example, given array A such that:
-#  A[0] = 2
-#  A[1] = 3
-#  A[2] = 1
-#  A[3] = 5
-#
-#the function should return 4, as it is the missing element.
-#
-#Assume that:
-#
-#        N is an integer within the range [0..100,000];
-#        the elements of A are all distinct;
-#        each element of array A is an integer within the range [1..(N + 1)].
-#
-#Complexity:
-#
-#        expected worst-case time complexity is O(N);
-#        expected worst-case space complexity is O(1), beyond input storage (not counting the storage required for input arguments).
-#
-#Elements of input arrays can be modified.
-#
+https://app.codility.com/programmers/lessons/3-time_complexity/perm_missing_elem/start/
+#ruby(2.2 or more)
 def solution(a)
          length=a.length+1
          sum1=(a.inject :+).to_i
@@ -40,3 +11,23 @@ end
 #a=[1,2,3,4,5,6,8]
 #a=[1]
 #solution(a)
+
+#Python3
+def solution(A):
+      A.sort()
+      #[2,3] or []
+      if len(A)==0 or A[0] != 1:
+         return 1
+      # [1]
+      if len(A)==1 and A[0] == 1:
+         return (A[0]+1)
+     
+      A=set(A)
+      B=set(range(min(A),max(A)+1))
+      r = list(B-A)
+      
+      if r:
+         return r[0]
+      else:
+               #[1,2] is the B and A.then..
+         return max(A)+1
