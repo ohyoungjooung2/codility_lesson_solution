@@ -29,3 +29,38 @@ def solution(A):
                 c+=1
     return c
 
+#Yet another Python3 slow solution(70%-100% correctness)
+
+def solution(A):
+    zero_dic={}
+    c=0
+    for i in range(len(A)):
+         if A[i] == 0:
+             zero_dic[c]=i
+             c+=1
+    sum=0
+    for key,items in zero_dic.items():
+        #print(key,items)
+        sum+=(len(A)-1-items)-(len(zero_dic)-(int(key)+1))
+     
+    return sum
+ 
+#More longer but 70%(100% correctness and 40% performance) 
+ def sol(A):
+    zero_index=[]
+    for i in range(len(A)):
+         if A[i] == 0:
+             zero_index.append(i)
+    zero_dic={}
+    for i in range(len(zero_index)):
+        zero_dic[str(i)]=zero_index[i]
+    #return(zero_dic)
+    sum=0
+    for key,items in zero_dic.items():
+        print(key,items)
+        sum+=(len(A)-1-items)-(len(zero_index)-(int(key)+1))
+        
+    return sum
+
+ 
+ 
