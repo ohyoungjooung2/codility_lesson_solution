@@ -1,3 +1,4 @@
+#Ruby 100%(correct,performance)
 def solution(a)
   #https://codility.com/programmers/lessons/5-prefix_sums/passing_cars/
   # write your code in Ruby 2.2
