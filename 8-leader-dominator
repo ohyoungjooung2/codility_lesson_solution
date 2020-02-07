@@ -1,0 +1,22 @@
+#Python3 leader dominator(100% correct and performance)
+#https://app.codility.com/programmers/lessons/8-leader/dominator/
+def solution(a):
+    if(len(a)==0): return -1
+    b=sorted(a)
+    n=len(a)
+    leader=-1
+    candi=(b[n//2])
+    count = 0
+    for i in range(n):
+        if (b[i] == candi):
+            count += 1
+           
+    if (count > n//2):
+        leader = candi
+        for j in range(len(a)):
+            if leader == a[j]:
+              return j
+    else:
+        return -1
+    
+    return r
