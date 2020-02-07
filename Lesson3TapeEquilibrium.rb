@@ -15,7 +15,45 @@ def sol(a)
 end
 
 
-#Nasty solution, correctness 100%, performance 0%^^;
+#Python3(100% correct but slow performance = 50%
+def solution(a):
+    b=[]
+    c=[]
+    d=[]
+    for i in range(len(a)):
+        lm=(sum(a[0:i+1]))
+        cm=(sum(a[i+1:]))
+        b.append(lm)
+        c.append(cm)
+    b.pop()
+    c.pop()
+    #print(b)
+    #print(c)
+    
+    
+    for j in range(len(b)):
+        r=abs(b[j]-c[j])
+        d.append(r)
+    final_result = min(d)
+    return final_result
+
+#Another slow performance but 100% correctness
+def solution(a):
+    d=[]
+   
+    for i in range(len(a)):
+        
+        lm=(sum(a[0:i+1]))
+        cm=(sum(a[i+1:]))
+        tmpv=lm-cm
+        tmpv=abs(tmpv)
+        d.append(tmpv)
+    d.pop()
+    return(min(d))
+
+       
+       
+#Nasty solution, correctness 100%, performance 0%-ruby version
 #def solution(a)
 #     z=[]
 #     a.each { |e| z << e }
