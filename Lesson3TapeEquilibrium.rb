@@ -14,6 +14,19 @@ def sol(a)
    ra.min
 end
 
+#python3 100% correctness and performance
+def solution(a):
+    length=len(a)-1
+    lsum=0
+    rsum=sum(a)
+    ra=[]
+    for i in range(length):
+        lsum+=a[i]
+        rsum-=a[i]
+        r=abs(rsum-lsum)
+        ra.append(r)
+    return(min(ra))
+
 
 #Python3(100% correct but slow performance = 50%
 def solution(a):
